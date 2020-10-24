@@ -1,0 +1,10 @@
+---
+- name: installing jetty 
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  vars_files:
+    - vars/vars.yml
+  roles:
+    - role: jetty
+    - role: mongo_db
